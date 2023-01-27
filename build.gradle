@@ -6,6 +6,7 @@ plugins {
 
 group = 'ssm-project'
 version = '0.0.1-SNAPSHOT'
+springBootVersion = '3.0.2'
 sourceCompatibility = '17'
 
 repositories {
@@ -15,7 +16,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation	'org.springframework.boot:spring-boot-gradle-plugin'
+	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 }
 
 tasks.named('test') {
