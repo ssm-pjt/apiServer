@@ -71,7 +71,8 @@ jobs:
           username: ubuntu
           password: ${{ secrets.CLOUD_HOST_PW }}
           script: |
-            sudo docker rm -f $(docker ps -qa)
+            sudo docker ${{ secrets.DOCKER_REPO }}/apiserver stop
+            sudo docker rm -f ${{ secrets.DOCKER_REPO }}/apiserver
             sudo docker pull ${{ secrets.DOCKER_REPO }}/apiserver
             cd /usr/local/docker
             docker-compose up -d
