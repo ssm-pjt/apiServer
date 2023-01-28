@@ -72,7 +72,7 @@ jobs:
           password: ${{ secrets.CLOUD_HOST_PW }}
           script: |
             sudo docker rm -f $(docker ps -qa)
-            sudo docker pull ${{ secrets.DOCKER_REPO }}/apiserver
-            sudo docker pull ${{ secrets.DOCKER_REPO }}/apiserver
+            sudo docker pull ${{ secrets.DOCKER_REPO }}
+            cd /usr/local/docker
             docker-compose up -d
             docker image prune -f
