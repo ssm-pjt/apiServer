@@ -45,9 +45,9 @@ jobs:
           echo "${{ secrets.DATABASE }}" >> ./application-database.yaml
         shell: bash
       ## gradle permission
-      -
-        name: Gradel permission
-        run: chmod +x ./gradlew
+      #-
+      #  name: Gradel permission
+      #  run: chmod +x ./gradlew
         
       ## gradle build
       - 
